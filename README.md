@@ -14,3 +14,12 @@ Biases:
 
 
 Busy with Uni applications but plan on starting by the new year at least. This is also mainly for me to cross the mental barrier of the notion that training models from scratch is black magic.
+
+Experiment Log:
+###### 18/12/2024
+1. dit_train.py:
+   1. Flow matching on MNIST. uniform timestep, fixed lr. AdamW, fp32, class conditioned for 100 epochs, batch size 1024
+   2. ISSUES: loss starts at 1.92 (epoch1) and oscillates around 1(epoch100.).
+   3. TO TRY: remove class labels and train
+   4. WHAT FAILED: different architectuers, my code and DiT code, excluding 1 from timesteps, different learning rates, 1e-3 to 1e-5, MNIST and FashionMNIST.
+      
