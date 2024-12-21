@@ -1,3 +1,46 @@
+1. Architectures:
+   - [ ] DiT (facebook, william peebles)
+   - [ ] Diff Transformer
+   - [ ] Sigmoid Attention
+   - [ ] Pre and Post LN instead of AdaLN
+   - [ ] Mix-FFN and linear attn ala SANA
+3. Optimizers:
+   - [ ] Adam, AdamW, SGD (pytorch inbuilt)
+   - [ ] Shampoo
+   - [ ] SOAP
+   - [ ] ADOPT
+   - [ ] PSGD
+   - [ ] +Caution (Add caution support to all listed optimizers here)
+   Notes: Compare training speed, memory.
+4. Distillation:
+   - [ ] LCM
+   - [ ] PCM
+   - [ ] LADD
+   - [ ] PeRFlow
+   - [ ] Shortcut models
+   Notes: Compare training speed, FID across n-steps where n E [1,4,8]
+6. Quantization:
+   - [ ] FP16
+   - [ ] BF16
+   - [ ] FP8 (COAT?)
+   - [ ] NF4
+   - [ ] BitLinear
+8. Metrics:
+   - [ ] FID
+   - [ ] LPIPS
+9. Timestep Sampling:
+   - [ ] Linear
+   - [ ] Linear Quadratic (Mochi, VidGen)
+   - [ ] Cosine
+   - [ ] Min-SNR
+   - [ ] log normal
+   - [ ] SpeeD
+   - [ ] Adaptive https://arxiv.org/pdf/2411.09998v1
+10. Improving diffusion representation:
+   - [ ] REPA
+   - [ ] Mask DiT
+1. Kernels
+
 The goal of this project is to build a simple proof of concept to test out the following:
 
 1. Different optimizers: ADAM, ADOPT, PSGD, and variants with Caution, MARS etc.
