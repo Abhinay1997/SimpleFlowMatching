@@ -24,4 +24,4 @@ Experiment Log:
    4. What Failed: different architectuers, my code and DiT code, excluding 1 from timesteps, different learning rates, 1e-3 to 1e-5, MNIST and FashionMNIST.
 
 ##### 20/12/2024
-After a couple of hours of debugging, I found the stupid bug. In the training loop instead of calling `model(x_noisy,y,t)` I was calling `model(x,y,t)` a.k.a I was giving my model a clean image and asking it to predict the noise at that timestep. Facepalm moment.
+After a couple of hours of debugging, I found the bug. In the training loop instead of calling `model(x_noisy,y,t)` I was calling `model(x,y,t)` a.k.a I was giving my model a clean image and asking it to predict the noise at that timestep.
