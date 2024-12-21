@@ -16,10 +16,12 @@ Biases:
 Busy with Uni applications but plan on starting by the new year at least. This is also mainly for me to cross the mental barrier of the notion that training models from scratch is black magic.
 
 Experiment Log:
-###### 18/12/2024
+##### 18/12/2024
 1. dit_train.py:
    1. Flow matching on MNIST. uniform timestep, fixed lr. AdamW, fp32, class conditioned for 100 epochs, batch size 1024
-   2. ISSUES: loss starts at 1.92 (epoch1) and oscillates around 1(epoch100.).
-   3. TO TRY: remove class labels and train
-   4. WHAT FAILED: different architectuers, my code and DiT code, excluding 1 from timesteps, different learning rates, 1e-3 to 1e-5, MNIST and FashionMNIST.
-      
+   2. Issue: loss starts at 1.92 (epoch1) and oscillates around 1(epoch100.).
+   3. To Try: remove class labels and train
+   4. What Failed: different architectuers, my code and DiT code, excluding 1 from timesteps, different learning rates, 1e-3 to 1e-5, MNIST and FashionMNIST.
+
+##### 20/12/2024
+After a couple of hours of debugging, I found the stupid bug. In the training loop instead of calling `model(x_noisy,y,t)` I was calling `model(x,y,t)` a.k.a I was giving my model a clean image and asking it to predict the noise at that timestep. Facepalm moment.
