@@ -16,3 +16,6 @@ Ablations:
 9. Old diffusion coupling too for completeness ?
 
 For now I'll be running them on MNIST.
+
+Finding optimal model capacity:
+-> Using batch overfit tests
